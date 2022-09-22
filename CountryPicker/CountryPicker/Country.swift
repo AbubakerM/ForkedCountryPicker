@@ -73,7 +73,7 @@ open class Country {
 }
 
 func mapCountryName(_ countryCode: String) -> String {
-    let locale = Locale(identifier: Locale.preferredLanguages.first!)
+    let locale = CountryManager.shared.locale ?? Locale(identifier: "en")
     guard let localisedCountryName = locale.localizedString(forRegionCode: countryCode) else {
         let message = "Failed to localised country name for Country Code:- \(countryCode)"
         fatalError(message)

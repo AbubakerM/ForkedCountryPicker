@@ -67,6 +67,9 @@ open class CountryManager: CountryListDataSource {
         return countryManager
     }()
     
+    /// Country manage locale variable
+    open var locale: Locale?
+    
     /// Current country returns the country object from Phone/Simulator locale
     open var currentCountry: Country? {
         guard let countryCode = Locale.current.regionCode else {
