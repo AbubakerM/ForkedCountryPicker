@@ -68,7 +68,7 @@ open class CountryManager: CountryListDataSource {
     }()
     
     /// Country manage locale variable
-    open var locale: Locale?
+    public static var locale: Locale?
     
     /// Current country returns the country object from Phone/Simulator locale
     open var currentCountry: Country? {
